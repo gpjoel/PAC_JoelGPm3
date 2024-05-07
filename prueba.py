@@ -48,7 +48,7 @@ print(persona.items())
 
 # Afegir
     # mitjançant index
-    # mitjançant mètode (update())
+    # mitjançant mètode (update()) The update() method will update the dictionary with the items from a given argument. If the item does not exist, the item will be added.
 
 persona.update({"Ubicacio": "Barcelona"})
 persona["pes"] = 80
