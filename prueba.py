@@ -50,8 +50,20 @@ print(persona.items())
     # mitjançant index
     # mitjançant mètode (update())
 
+persona.update({"Ubicacio": "Barcelona"})
+persona.insert(5, "Pes")
+
+
 # Eliminar
     # mitjançant mètode (pop())
-    # mitjançant mètode (popitem())
-    # mitjançant mètode (clear())
+persona.pop(5)
+print(persona)
+    # mitjançant mètode (popitem()) en este caso elimina el utlimo del diccionario
+
+persona.popitem()
+print(persona)
+    # mitjançant mètode (clear()) elimina toda la lista 
+
+persona.clear()
+print(persona)  
     # mitjançant paraula clau (del)
