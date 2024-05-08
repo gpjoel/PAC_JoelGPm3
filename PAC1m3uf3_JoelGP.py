@@ -26,9 +26,33 @@
 
 
 from os import system, name
+from asciimatics.effects import Cycle, Stars
+from asciimatics.renderers import FigletText
+from asciimatics.scene import Scene
+from asciimatics.screen import Screen
+
+
+
 def clear(): system('cls') if name == 'nt' else system('clear')
 # Creació
+def demo(screen):
+    effects = [
+        Cycle(
+            screen,
+            FigletText("CLICK", font='big'),
+            int(screen.height / 2 - 8)),
+        Cycle(
+            screen,
+            FigletText("X JGP!", font='big'),
+            int(screen.height / 2 + 3)),
+        Stars(screen, 200)
+    ]
+    screen.play([Scene(effects, 500)])
+    screen.wait_for_input(5)  # Esperar 5 segundos
+    screen.clear()
+    
 
+Screen.wrapper(demo)
 persona =	{
   "nom": "Eustaqui",
   "llocNaixement": "Andorra",
